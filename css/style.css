@@ -1,4 +1,11 @@
 
+body {
+  font-family: 'Lato', 'Raleway';
+}
+
+img { /* これをつけなければ画像の妙の隙間は消えない */
+  vertical-align: bottom;
+}
 
 .clearfix::before,
 .clearfix::after {
@@ -20,10 +27,12 @@ button {
 .inner {
   display: block;
   margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 15px;
 }
 
 /* Fixed Top Bar */
-.top-bar {
+header {
   position: fixed;
   width: 100%;
   top: 0;
@@ -32,8 +41,7 @@ button {
   box-sizing: border-box;
   z-index: 9999;
   text-align: center;
-  padding: 15px 0 15px;
-  font-family: 'Lato', 'Raleway';
+  padding: 15px 0;
 }
 
 .top-bar__fontawesome {
@@ -64,7 +72,7 @@ button {
 /* Main Part */
 .main-box {
   width: 100%;
-  margin-top: 50px;
+  margin-top: 73px;
   font-family: 'Lato', 'Raleway';
 }
 
@@ -92,7 +100,7 @@ button {
 }
 
 .main-box__skill-box {
-  padding-bottom: 100px;
+  padding: 70px 0 100px;
   background: #4e4e4e;
   text-align: center;
 }
@@ -100,10 +108,10 @@ button {
 .skill-box__skill-title {
   color: #fff;
   font-size: 24px;
-  padding: 70px;
 }
 
-.skill-box__skill-description {
+.skill-description__list {
+  margin-top: 40px;
 }
 
 .skill-description__list > li:first-child {
@@ -116,15 +124,12 @@ button {
 
 .skill-description__list__text {
   font-size: 16px;
+  margin-top: 10px;
 }
 
 .main-box__sns-box {
   text-align: center;
   background: #f2f2f2;
-}
-
-.sns-box__list {
-
 }
 
 .sns-box__list > li {
@@ -138,90 +143,102 @@ button {
   background: #fff;
 }
 
-.main-box__fotter {
+footer {
   color: #fff;
   text-align: right;
   background: #74cfae;
   padding: 20px 10px 25px;
 }
 
-
 /* PC: 1200 ~ */
-@media screen and (min-width: 1200px) {
 
-  .menu {
-    display: none;
-    cursor: pointer;
-  }
+.menu {
+  display: none;
+  cursor: pointer;
+}
 
-  .top-bar__contact-btn-box {
-    display: inline-block;
-  }
+.top-bar__contact-btn-box {
+  display: inline-block;
+}
 
-  .inner {
+.main-box__theme-box {
+  padding: 250px 0;
+  background: #f2f2f2;
+}
+
+.theme-box__theme {
+  font-size: 90px;
+  font-weight: 700;
+  text-align: center;
+  color: #74cfae;
+}
+
+.theme-box__sub-theme {
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+  color: #c0c0c0;
+}
+
+.main-box__iphone-box {
+  background: #74cfae;
+  font-size: 0;
+  padding: 50px 50px 0;
+}
+
+.grid {
     max-width: 1200px;
-  }
+    font-size: 0;
+}
 
-  .main-box__theme-box {
-    padding: 250px 0;
-    background: #f2f2f2;
-  }
+.iphone-box__iphone-img-box {
+  width: 40%;
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+}
 
-  .theme-box__theme {
-    font-size: 90px;
-    font-weight: 700px;
-    text-align: center;
-    color: #74cfae;
-  }
+.iphone-box__iphone-description-box {
+  width: 60%;
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+}
 
-  .theme-box__sub-theme {
-    padding: 20px;
-    font-size: 30px;
-    text-align: center;
-    color: #c0c0c0;
-  }
+.iphone-description-box__title {
+  color: #fff;
+  font-size: 24px;
+  text-align: center;
+  font-family: 'Raleway', 'Lato';
+}
 
-  .main-box__iphone-box {
-    background: #74cfae;
-    padding-top: 50px;
-  }
+.iphone-description-box__description {
+  color: #fff;
+  font-size: 20px;
+  margin-top: 35px;
+  text-align: center;
+  word-break: break-all;
+  font-family: 'Raleway', 'Lato';
+  line-height: 40px;
+}
 
-  .iphone-box__iphone-img-box {
-    width: 40%;
-    float: left;
-  }
+.picture-list__list {
+  max-width: 1100px;
+  margin: 40px auto 90px;
+}
 
-  .iphone-box__iphone-img-box > img {
-    float: right;
-    margin-right: 100px;
-  }
-
-  .iphone-box__iphone-description-box {
-    width: 40%;
-    float: left;
-  }
-
-  .iphone-description-box__title {
-    padding-top: 50px;
-    color: #fff;
-    font-size: 24px;
-    text-align: center;
-  }
-
-  .iphone-description-box__description {
-    color: #fff;
-    font-size: 20px;
-    margin-top: 35px;
-    text-align: center;
-    word-break: break-all;
-  }
-
-
-/* -------------------------- */
 .picture-list__list > li {
   float: left;
-  margin: 40px 50px;
+  margin-left: 100px;
   opacity: 0.7;
+}
+
+.picture-list__list > li:nth-child(3n+1) {
+  margin-left: 0;
+}
+
+.picture-list__list > li:nth-child(n+4) {
+  margin-top: 80px;
 }
 
 .latest-work__picture-email {
@@ -254,22 +271,20 @@ button {
 .email-btn-box__btn:hover {
   color: #000;
 }
-/* -------------------------- */
 
-  .skill-description__list > li {
-    display: inline-block;
-    margin-left: 180px;
-  }
+.skill-description__list > li {
+  display: inline-block;
+  margin-left: 180px;
+}
 
-  .main-box__sns-box {
-    padding-top: 200px;
-    padding-bottom: 200px;
-  }
+.main-box__sns-box {
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
 
-  .sns-box__list > li {
-    display: inline-block;
-    width: 185px;
-  }
+.sns-box__list > li {
+  display: inline-block;
+  width: 185px;
 }
 
 /* TAB: 767 ~ 1199 */
@@ -321,22 +336,18 @@ button {
     width: 185px;
   }
 
-  .inner {
-    min-width: 767px;
-  }
-
   .main-box__iphone-box {
     padding: 50px 50px 25px;
   }
 
   .iphone-box__iphone-img-box {
     display: block;
-    text-align: center;
+    margin: 0 auto;
   }
 
   .iphone-box__iphone-description-box {
     display: block;
-    text-align: center;
+    margin: 0 auto;
   }
 
   .iphone-description-box__title {
@@ -355,6 +366,9 @@ button {
 
   .picture-list__list > li {
     opacity: 0.7;
+    float: none;
+    margin: 0 auto;
+    text-align: center;
   }
 
   .picture-list__list {
@@ -363,6 +377,10 @@ button {
 
   .picture-list__list > li:nth-child(3) {
     margin-bottom: 80px;
+  }
+
+  .picture-list__list > li:nth-child(n+4) {
+    margin-top: 0;
   }
 
   .latest-work__picture-email {
@@ -380,19 +398,26 @@ button {
 
   .picture-email__email-btn-box {
     display: block;
-    padding-top: 40px;
+    margin-top: 40px;
+    padding-left: 0;
+    text-align: center;
   }
 
   .email-btn-box__btn {
     width: 100px;
     font-size: 12px;
     padding: 14px 20px;
-    color: #74cfae;
+    color: #fff;
   }
 
   .email-btn-box__btn:hover {
     background: #74cfae;
-    color: #fff;
+    color: #000;
+  }
+
+  .skill-description__list > li {
+    display: block;
+    margin-left: 0;
   }
 }
 
@@ -405,7 +430,7 @@ button {
     position: relative;
     width: 60px;
     height: 40px;
-    border: solid 3px #ccc;
+    border: solid 1px #ccc;
     border-radius: 5px;
     margin: 0 15px;
     cursor: pointer;
@@ -426,7 +451,7 @@ button {
     display: none;
     transition: all 3s;
     position: absolute;
-    top: 74px;
+    top: 70px;
     left: 0;
     z-index: -1;
   }
@@ -468,7 +493,16 @@ button {
   }
 
   .iphone-box__iphone-img-box {
+    width: 100%;
     text-align: center;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .iphone-box__iphone-description-box {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
   }
 
   .iphone-description-box__title {
@@ -506,7 +540,9 @@ button {
 
   .picture-email__email-btn-box {
     display: block;
-    padding-top: 40px;
+    margin-top: 40px;
+    padding-left: 0;
+    text-align: center;
   }
 
   .email-btn-box__btn {
@@ -528,6 +564,26 @@ button {
   }
   .skill-description__list > li:first-child {
     margin-top: 0;
+  }
+
+  .picture-list__list > li {
+    opacity: 0.7;
+    float: none;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .picture-list__list {
+    margin: 40px auto 80px;
+  }
+
+  .picture-list__list > li:nth-child(n+4) {
+    margin-top: 0;
+  }
+
+  .skill-description__list > li {
+      display: block;
+      margin: 80px auto 0;
   }
 
   .main-box__sns-box {
