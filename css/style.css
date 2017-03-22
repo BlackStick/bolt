@@ -1,0 +1,541 @@
+
+
+.clearfix::before,
+.clearfix::after {
+  display: block;
+  content: '';
+  clear: both;
+}
+
+button {
+  padding: 0;
+  margin: 0;
+  outline: none;
+  border-radius: 0;
+  background: #fff;
+  border: 0;
+  appearance: none;
+}
+
+.inner {
+  display: block;
+  margin: 0 auto;
+}
+
+/* Fixed Top Bar */
+.top-bar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: #fff;
+  box-sizing: border-box;
+  z-index: 9999;
+  text-align: center;
+  padding: 15px 0 15px;
+  font-family: 'Lato', 'Raleway';
+}
+
+.top-bar__fontawesome {
+  float: left;
+  margin: 0 15px;
+}
+
+.top-bar__fontawesome > i {
+  color: #4e4e4e;
+}
+
+.top-bar__contact-btn-box {
+  display: inline-block;
+  float: right;
+}
+
+.contact-btn-box__contact-btn {
+  font-size: 12px;
+  padding: 14px 12px;
+  color: #fff;
+  background: #74cfae;
+}
+
+.contact-btn-box__contact-btn:hover {
+  color: #000;
+}
+
+/* Main Part */
+.main-box {
+  width: 100%;
+  margin-top: 50px;
+  font-family: 'Lato', 'Raleway';
+}
+
+.main-box__iphone-box {
+  background: #74cfae;
+}
+
+.main-box__latest-work {
+  background: #f2f2f2;
+  padding-bottom: 70px;
+}
+
+.latest-work__picture-title {
+  padding-top: 60px;
+  text-align: center;
+  font-size: 24px;
+}
+
+.latest-work__picture-list {
+  text-align: center;
+}
+
+.picture-list__list > li:hover {
+  opacity: 1;
+}
+
+.main-box__skill-box {
+  padding-bottom: 100px;
+  background: #4e4e4e;
+  text-align: center;
+}
+
+.skill-box__skill-title {
+  color: #fff;
+  font-size: 24px;
+  padding: 70px;
+}
+
+.skill-box__skill-description {
+}
+
+.skill-description__list > li:first-child {
+  margin-left: 0;
+}
+
+.skill-description__list > li {
+  color: #fff;
+}
+
+.skill-description__list__text {
+  font-size: 16px;
+}
+
+.main-box__sns-box {
+  text-align: center;
+  background: #f2f2f2;
+}
+
+.sns-box__list {
+
+}
+
+.sns-box__list > li {
+  padding: 10px;
+  width: 185px;
+  color: #74cfae;
+  box-sizing: border-box;
+}
+
+.sns-box__list > li:hover {
+  background: #fff;
+}
+
+.main-box__fotter {
+  color: #fff;
+  text-align: right;
+  background: #74cfae;
+  padding: 20px 10px 25px;
+}
+
+
+/* PC: 1200 ~ */
+@media screen and (min-width: 1200px) {
+
+  .menu {
+    display: none;
+    cursor: pointer;
+  }
+
+  .top-bar__contact-btn-box {
+    display: inline-block;
+  }
+
+  .inner {
+    max-width: 1200px;
+  }
+
+  .main-box__theme-box {
+    padding: 250px 0;
+    background: #f2f2f2;
+  }
+
+  .theme-box__theme {
+    font-size: 90px;
+    font-weight: 700px;
+    text-align: center;
+    color: #74cfae;
+  }
+
+  .theme-box__sub-theme {
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+    color: #c0c0c0;
+  }
+
+  .main-box__iphone-box {
+    background: #74cfae;
+    padding-top: 50px;
+  }
+
+  .iphone-box__iphone-img-box {
+    width: 40%;
+    float: left;
+  }
+
+  .iphone-box__iphone-img-box > img {
+    float: right;
+    margin-right: 100px;
+  }
+
+  .iphone-box__iphone-description-box {
+    width: 40%;
+    float: left;
+  }
+
+  .iphone-description-box__title {
+    padding-top: 50px;
+    color: #fff;
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .iphone-description-box__description {
+    color: #fff;
+    font-size: 20px;
+    margin-top: 35px;
+    text-align: center;
+    word-break: break-all;
+  }
+
+
+/* -------------------------- */
+.picture-list__list > li {
+  float: left;
+  margin: 40px 50px;
+  opacity: 0.7;
+}
+
+.latest-work__picture-email {
+  display: table;
+  max-width: 650px;
+  margin-top: 50px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.picture-email__email-description {
+  display: table-cell;
+  text-align: center;
+}
+
+.picture-email__email-btn-box {
+  display: table-cell;
+  text-align: left;
+  padding-left: 90px;
+}
+
+.email-btn-box__btn {
+  width: 100px;
+  font-size: 12px;
+  padding: 14px 20px;
+  color: #fff;
+  background: #74cfae;
+}
+
+.email-btn-box__btn:hover {
+  color: #000;
+}
+/* -------------------------- */
+
+  .skill-description__list > li {
+    display: inline-block;
+    margin-left: 180px;
+  }
+
+  .main-box__sns-box {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
+
+  .sns-box__list > li {
+    display: inline-block;
+    width: 185px;
+  }
+}
+
+/* TAB: 767 ~ 1199 */
+@media screen and (min-width: 767px) and (max-width: 1199px) {
+
+  .menu {
+    display: none;
+  }
+
+  .top-bar__contact-btn-box {
+    display: inline-block;
+  }
+
+  .main-box__theme-box {
+    padding: 250px 0;
+    background: #f2f2f2;
+  }
+
+  .theme-box__theme {
+    font-size: 90px;
+    font-weight: 700px;
+    text-align: center;
+    color: #74cfae;
+  }
+
+  .theme-box__sub-theme {
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+    color: #c0c0c0;
+  }
+
+  .skill-description__list > li {
+    display: block;
+    margin-top: 88px;
+  }
+
+  .skill-description__list > li:first-child {
+    margin-top: 0;
+  }
+
+  .main-box__sns-box {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
+
+  .sns-box__list > li {
+    display: inline-block;
+    width: 185px;
+  }
+
+  .inner {
+    min-width: 767px;
+  }
+
+  .main-box__iphone-box {
+    padding: 50px 50px 25px;
+  }
+
+  .iphone-box__iphone-img-box {
+    display: block;
+    text-align: center;
+  }
+
+  .iphone-box__iphone-description-box {
+    display: block;
+    text-align: center;
+  }
+
+  .iphone-description-box__title {
+    color: #fff;
+    font-size: 24px;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .iphone-description-box__description {
+    color: #fff;
+    font-size: 20px;
+    margin-top: 35px;
+    text-align: center;
+  }
+
+  .picture-list__list > li {
+    opacity: 0.7;
+  }
+
+  .picture-list__list {
+    margin: 40px auto 80px;
+  }
+
+  .picture-list__list > li:nth-child(3) {
+    margin-bottom: 80px;
+  }
+
+  .latest-work__picture-email {
+    display: block;
+    max-width: 650px;
+    margin-top: 50px;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .picture-email__email-description {
+    display: block;
+    text-align: center;
+  }
+
+  .picture-email__email-btn-box {
+    display: block;
+    padding-top: 40px;
+  }
+
+  .email-btn-box__btn {
+    width: 100px;
+    font-size: 12px;
+    padding: 14px 20px;
+    color: #74cfae;
+  }
+
+  .email-btn-box__btn:hover {
+    background: #74cfae;
+    color: #fff;
+  }
+}
+
+/* SP: ~ 766 */
+@media screen and (max-width: 766px) {
+
+  .menu {
+    display: inline-block;
+    float: right;
+    position: relative;
+    width: 60px;
+    height: 40px;
+    border: solid 3px #ccc;
+    border-radius: 5px;
+    margin: 0 15px;
+    cursor: pointer;
+  }
+
+  .menu::before {
+    position: absolute;
+    content: "≡";
+    font-size: 50px;
+    top: -6px;
+    right: 16px;
+    color: #777;
+  }
+
+  /* Before Click */
+  .top-bar__contact-btn-box {
+    width: 100%;
+    display: none;
+    transition: all 3s;
+    position: absolute;
+    top: 74px;
+    left: 0;
+    z-index: -1;
+  }
+
+  /* こうすると優先度が高くなる　（とても便利） */
+  .top-bar__contact-btn-box.isBlock {
+    display: block;
+  }
+
+  .contact-btn-box__contact-btn {
+    width: 100%;
+    font-size: 12px;
+    padding: 14px 12px;
+    color: #fff;
+    text-align: left;
+  }
+
+  .main-box__theme-box {
+    padding: 160px 10px 130px;
+    background: #f2f2f2;
+    text-align: center;
+  }
+
+  .theme-box__theme {
+    font-size: 80px;
+    text-align: center;
+    color: #74cfae;
+  }
+
+  .theme-box__sub-theme {
+    font-size: 30px;
+    text-align: center;
+    color: #c0c0c0;
+    padding-top: 20px;
+  }
+
+  .main-box__iphone-box {
+    padding: 50px 25px 25px;
+  }
+
+  .iphone-box__iphone-img-box {
+    text-align: center;
+  }
+
+  .iphone-description-box__title {
+    display: block;
+    color: #fff;
+    font-size: 24px;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .iphone-description-box__description {
+    display: block;
+    color: #fff;
+    font-size: 20px;
+    margin-top: 35px;
+    text-align: center;
+  }
+
+  .picture-list__list {
+    margin: 40px auto 80px;
+  }
+
+  .latest-work__picture-email {
+    display: block;
+    max-width: 650px;
+    margin-top: 50px;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .picture-email__email-description {
+    display: block;
+    text-align: center;
+  }
+
+  .picture-email__email-btn-box {
+    display: block;
+    padding-top: 40px;
+  }
+
+  .email-btn-box__btn {
+    width: 100px;
+    font-size: 12px;
+    padding: 14px 20px;
+    color: #fff;
+    background: #74cfae;
+  }
+
+  .email-btn-box__btn:hover {
+    background: #74cfae;
+    color: #000;
+  }
+
+  .skill-description__list > li {
+    display: block;
+    margin-top: 88px;
+  }
+  .skill-description__list > li:first-child {
+    margin-top: 0;
+  }
+
+  .main-box__sns-box {
+    padding: 50px 15px;
+  }
+
+  .sns-box__list > li {
+    display: block;
+    width: 100%;
+  }
+}
